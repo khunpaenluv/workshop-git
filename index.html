@@ -5,5 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <style>
+      body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .todo-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input[type="text"],
+        textarea {
+            padding: 8px;
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    
+    <h2>TODO Form</h2>
+    
+    <form class="todo-form" action="/submit-todo" method="POST">
+        <label for="task">Task</label>
+        <input type="text" id="task" name="task" placeholder="Enter your task" required>
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="4" placeholder="Describe the task"></textarea>
+
+        <label for="dueDate">Due Date</label>
+        <input type="date" id="dueDate" name="dueDate">
+
+        <button type="submit">Add Task</button>
+    </form>
+
+  </body>
 </html>
