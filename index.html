@@ -22,5 +22,73 @@
         <span class="bar"></span>
         <span class="bar"></span>
     </div>
-</nav></body>
+</nav>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+}
+
+.navbar-brand .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-links ul li {
+    margin: 0 1rem;
+}
+
+.navbar-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .navbar-links ul {
+        flex-direction: column;
+        display: none;
+    }
+    
+    .navbar-links ul.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}
+    </style>
+  </body>
 </html>
